@@ -8,7 +8,7 @@ pipeline{
      }
      stage('Sonar_test') {
        steps{
-           withSonarQubeEnv('My SonarQube Server') { // If you have configured more than one global server connection, you can specify its name
+           withSonarQubeEnv('sonar_test') { // If you have configured more than one global server connection, you can specify its name
            sh "${scannerHome}/bin/sonar-scanner"
            }    
         }
